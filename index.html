@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="id">
+    <div>
+  <a href="https://biodatarassya" class="btn">biodata rassya</a>
+</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Muhammad Rassya Apriza</title>
+    <!-- Framework & Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
+        
+        /* Base Styles */
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Hero & Navigation */
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        /* Profile & Cards */
+        .profile-img {
+            border: 6px solid white;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            object-position: center 20%;
+        }
+
+        .info-row {
+            display: flex;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+        }
+        .info-row:last-child { border-bottom: none; }
+
+        /* Timeline Education */
+        .timeline-dot {
+            position: relative;
+        }
+
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #3b82f6;
+            border: 3px solid #dbeafe;
+            z-index: 10;
+        }
+
+        .education-card {
+            transition: all 0.3s ease;
+            border-left: 2px solid #e2e8f0;
+        }
+
+        .education-card:hover {
+            border-left-color: #3b82f6;
+            background: white;
+            transform: translateX(5px);
+        }
+
+        /* Story Section */
+        .story-img-container {
+            overflow: hidden;
+            border-radius: 1.5rem;
+            aspect-ratio: 4/3;
+            background: #e2e8f0;
+        }
+
+        .story-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .story-img-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigasi -->
+    <nav class="fixed top-0 w-full z-50 glass-effect py-4 px-6 flex justify-center items-center">
+        <div class="space-x-6 text-sm font-semibold opacity-70">
+            <a href="#about" class="hover:text-blue-600 transition">Profil</a>
+            <a href="#skills" class="hover:text-blue-600 transition">Kemahiran</a>
+            <a href="#education" class="hover:text-blue-600 transition">Pendidikan</a>
+            <a href="#story" class="hover:text-blue-600 transition">Cerita</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient pt-32 pb-24 px-6 text-white text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-64 h-64 bg-white opacity-5 rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-400 opacity-10 rounded-full translate-x-1/3 translate-y-1/3"></div>
+
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="mb-8 inline-block">
+                <img src="rassya.jpeg" id="user-profile-img" alt="Muhammad Rassya Apriza" class="w-44 h-44 md:w-56 md:h-56 rounded-3xl object-cover profile-img mx-auto">
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-8 tracking-tight">Muhammad Rassya Apriza</h1>
+            
+            <div class="flex justify-center space-x-4">
+                <a href="tel:083873356316" class="bg-white text-blue-700 px-10 py-4 rounded-2xl font-bold shadow-lg hover:bg-blue-50 transition flex items-center">
+                    <i data-lucide="phone" class="w-5 h-5 mr-2"></i> Kontak Saya
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten Utama -->
+    <main class="max-w-4xl mx-auto px-6 py-16 space-y-24">
+        
+        <!-- Section Profil -->
+        <section id="about" class="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+                <h2 class="text-3xl font-bold mb-6 flex items-center tracking-tight text-slate-800">
+                    <i data-lucide="user" class="mr-3 text-blue-600"></i> Profil Peribadi
+                </h2>
+                
+                <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+                    <div class="info-row">
+                        <span class="w-1/3 text-slate-400 text-sm font-semibold uppercase tracking-wider">Tempat Lahir</span>
+                        <span class="w-2/3 text-slate-700 font-bold">Tangerang</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="w-1/3 text-slate-400 text-sm font-semibold uppercase tracking-wider">Tanggal Lahir</span>
+                        <span class="w-2/3 text-slate-700 font-bold">17 April 2007</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="w-1/3 text-slate-400 text-sm font-semibold uppercase tracking-wider">Agama</span>
+                        <span class="w-2/3 text-slate-700 font-bold">Islam</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="w-1/3 text-slate-400 text-sm font-semibold uppercase tracking-wider">Lokasi</span>
+                        <span class="w-2/3 text-slate-700 font-bold">Indonesia</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-blue-600 p-8 rounded-[2rem] text-white shadow-xl relative overflow-hidden h-full flex flex-col justify-center">
+                <div class="relative z-10">
+                    <h3 class="text-xl font-bold mb-2">Status Saat Ini</h3>
+                    <p class="text-blue-100 text-sm mb-4">Sedang menempuh pendidikan tinggi.</p>
+                    <div class="flex items-center text-2xl font-bold">
+                        <i data-lucide="graduation-cap" class="mr-2"></i> Universitas Gunadarma
+                    </div>
+                    <p class="text-xs mt-2 opacity-80 uppercase tracking-wider font-semibold text-blue-200 tracking-[0.2em]">Manajemen</p>
+                </div>
+                <div class="absolute -right-4 -bottom-4 w-32 h-32 bg-white opacity-10 rounded-full"></div>
+            </div>
+        </section>
+
+        <!-- Section Kemahiran -->
+        <section id="skills" class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100">
+            <h2 class="text-2xl font-bold mb-10 text-center text-slate-800">Kemahiran Utama</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div class="p-6 border border-slate-100 rounded-3xl text-center hover:shadow-md hover:border-blue-200 transition-all cursor-default group">
+                    <div class="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="code" class="w-7 h-7 text-orange-500"></i>
+                    </div>
+                    <span class="text-base font-bold text-slate-700">HTML</span>
+                    <p class="text-[10px] text-slate-400 mt-1 uppercase tracking-wider">Struktur Web</p>
+                </div>
+                
+                <div class="p-6 border border-slate-100 rounded-3xl text-center hover:shadow-md hover:border-blue-200 transition-all cursor-default group">
+                    <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="palette" class="w-7 h-7 text-blue-500"></i>
+                    </div>
+                    <span class="text-base font-bold text-slate-700">CSS</span>
+                    <p class="text-[10px] text-slate-400 mt-1 uppercase tracking-wider">Desain Web</p>
+                </div>
+
+                <div class="p-6 border border-slate-100 rounded-3xl text-center hover:shadow-md hover:border-blue-200 transition-all cursor-default group">
+                    <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                        <i data-lucide="file-text" class="w-7 h-7 text-emerald-600"></i>
+                    </div>
+                    <span class="text-base font-bold text-slate-700">Microsoft Office</span>
+                    <p class="text-[10px] text-slate-400 mt-1 uppercase tracking-wider">Produktivitas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Pendidikan -->
+        <section id="education">
+            <h2 class="text-3xl font-bold mb-12 text-center tracking-tight text-slate-800">Riwayat Pendidikan</h2>
+            
+            <div class="max-w-2xl mx-auto ml-8 md:mx-auto space-y-4">
+                <div class="education-card p-5 pl-8 timeline-dot flex items-center justify-between rounded-2xl">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800">Universitas Gunadarma</h3>
+                        <p class="text-blue-600 text-xs font-bold uppercase tracking-wider">Perguruan Tinggi - Manajemen</p>
+                    </div>
+                    <i data-lucide="award" class="w-5 h-5 text-blue-400 opacity-50"></i>
+                </div>
+
+                <div class="education-card p-5 pl-8 timeline-dot flex items-center justify-between rounded-2xl">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800">SMA Negeri 17</h3>
+                        <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Sekolah Menengah Atas</p>
+                    </div>
+                </div>
+
+                <div class="education-card p-5 pl-8 timeline-dot flex items-center justify-between rounded-2xl">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800">SMP Negeri 1 Legok</h3>
+                        <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Sekolah Menengah Pertama</p>
+                    </div>
+                </div>
+
+                <div class="education-card p-5 pl-8 timeline-dot flex items-center justify-between rounded-2xl">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-800">SD Negeri Caringin 3</h3>
+                        <p class="text-slate-500 text-xs font-bold uppercase tracking-wider">Sekolah Dasar</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Cerita -->
+        <section id="story" class="space-y-12">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-800">Cerita & Momen</h2>
+                <p class="text-slate-500 mt-2">Kumpulan perjalanan berharga dalam hidup saya.</p>
+            </div>
+
+            <div class="grid gap-16">
+                <!-- Bromo -->
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="w-full md:w-1/2 story-img-container shadow-lg">
+                        <img src="sma.jpeg" alt="Bromo bersama teman SMA">
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-4">
+                        <span class="text-blue-600 font-bold text-sm uppercase tracking-widest flex items-center">
+                            <i data-lucide="mountain" class="w-4 h-4 mr-2"></i> Bromo
+                        </span>
+                        <h3 class="text-2xl font-bold text-slate-800">Kenangan Dingin di Bromo</h3>
+                        <p class="text-slate-600 leading-relaxed italic">
+                            Momen tak terlupakan saat berfoto bersama teman-teman sekelas SMA di tengah kemegahan Gunung Bromo. Tawa dan kedinginan yang kami bagi bersama menjadi simbol eratnya persahabatan sebelum kami menempuh jalan masing-masing.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mahasiswa Baru -->
+                <div class="flex flex-col md:flex-row-reverse gap-8 items-center">
+                    <div class="w-full md:w-1/2 story-img-container shadow-lg">
+                        <img src="maba.jpeg" alt="Maba Universitas Gunadarma">
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-4">
+                        <span class="text-blue-600 font-bold text-sm uppercase tracking-widest flex items-center">
+                            <i data-lucide="users" class="w-4 h-4 mr-2"></i> Mahasiswa Baru
+                        </span>
+                        <h3 class="text-2xl font-bold text-slate-800">Mahasiswa Baru</h3>
+                        <p class="text-slate-600 leading-relaxed italic">
+                            Awal babak baru di Universitas Gunadarma. Berfoto bersama teman-teman sekelas saat masa perkenalan kampus, penuh ambisi dan rasa optimis untuk menghadapi tantangan di dunia perkuliahan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Lebaran -->
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="w-full md:w-1/2 story-img-container shadow-lg">
+                        <img src="lebaran.jpeg" alt="Keluarga Lebaran">
+                    </div>
+                    <div class="w-full md:w-1/2 space-y-4">
+                        <span class="text-blue-600 font-bold text-sm uppercase tracking-widest flex items-center">
+                            <i data-lucide="heart" class="w-4 h-4 mr-2"></i> Idul Fitri
+                        </span>
+                        <h3 class="text-2xl font-bold text-slate-800">Lebaran</h3>
+                        <p class="text-slate-600 leading-relaxed italic">
+                            Momen suci Idul Fitri bersama keluarga tercinta. Tidak ada tempat yang lebih tenang selain di tengah pelukan keluarga, merayakan kemenangan setelah sebulan penuh berpuasa dengan penuh syukur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-12 px-6 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="#" class="text-slate-400 hover:text-blue-600 transition"><i data-lucide="github" class="w-5 h-5"></i></a>
+            <a href="#" class="text-slate-400 hover:text-blue-600 transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+            <a href="#" class="text-slate-400 hover:text-blue-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+        </div>
+        <!-- Update Tahun Copyright ke 2026 -->
+        <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">© 2026 Muhammad Rassya Apriza</p>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        /**
+         * Inisialisasi ikon Lucide
+         */
+        function initIcons() {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        /**
+         * Window Load Handler
+         */
+        window.addEventListener('load', () => {
+            initIcons();
+        });
+    </script>
+</body>
+</html>
